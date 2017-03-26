@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% load i18n %}
+{#{% load bootstrap3 %}#}
+
+{% block content %}
+<div class="col-md-4 col-md-offset-4">
+    <form id="form-send-text" action="{% url 'get-text' %}" class="form-horizontal form-validate"
+          data-toggle="validator" role="form" method="post" novalidate="novalidate">
+
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleTextarea">{% trans "Send text" %}</label>
+            <textarea class="form-control" name='text' id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">{% trans "Send" %}</button>
+        <a class="list-of-text" href="{% url 'list-of-text' %}">{% trans "List of text" %}</a>
+    </form>
+</div>
+{#<div class="col-md-4 col-md-offset-4">#}
+{#    #}
+{#</div>#}
+{% endblock %}

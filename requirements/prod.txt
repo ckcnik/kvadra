@@ -1,0 +1,4 @@
+-r base.txt
+uWSGI==2.0.13.1
+gunicorn==19.3.0
+pudb==2015.4.1

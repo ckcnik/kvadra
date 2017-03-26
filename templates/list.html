@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% load i18n %}
+{#{% load bootstrap3 %}#}
+
+{% block content %}
+    <ul>
+        {% for text in text_list %}
+        <li class="col-md-3 col-sm-6 col-xs-12 isotope-item development">
+            {{ text.text }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
